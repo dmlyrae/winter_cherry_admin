@@ -1,0 +1,87 @@
+.card {
+  @apply basis-full md:basis-1/3  flex flex-col justify-between 
+   m-2 rounded-md 
+   pt-3 transition-all duration-300
+   overflow-hidden shadow-slate-400 shadow-md relative;
+  &__block {
+    &_title,
+    &_sportsmen {
+      @apply p-2;
+    }
+    &_title {
+    }
+    &_buttons {
+      @apply flex flex-row justify-center relative 
+        bottom-0 left-0 right-0 mt-1
+        border-t border-slate-300;
+      .card-button {
+        @apply hover:bg-slate-300 text-slate-700 basis-1/2 p-1 transition-colors duration-200 
+        flex flex-row justify-center align-middle;
+        &:first-child {
+          @apply text-teal-400;
+        }
+        &:last-child {
+          @apply text-red-500 border-l border-slate-300;
+        }
+        &:before,
+        &_approved:before {
+          content: attr(data-icon);
+          font-size: 2rem;
+          vertical-align: middle;
+          font-family: "icons";
+          font-style: normal;
+          font-weight: normal;
+          text-transform: none;
+          speak: none;
+          content: attr(data-icon);
+          opacity: 0.9;
+        }
+        &:before:hover {
+          opacity: 1;
+        }
+        &_approved {
+          @apply basis-1/2 p-1 text-amber-400 flex flex-row justify-center align-middle cursor-default;
+        }
+      }
+    }
+    &_sportsmen {
+      @apply relative flex flex-row flex-wrap justify-center rounded-sm;
+      .sportsmen {
+        @apply text-xs text-ellipsis px-2 py-1 basis-1/2 flex text-center flex-col justify-center align-middle;
+        .id {
+          @apply text-teal-600 hover:text-amber-600 cursor-pointer;
+        }
+        .sportsmen-details {
+          @apply flex flex-row justify-center align-middle;
+          span {
+            @apply mx-2 whitespace-nowrap;
+          }
+        }
+      }
+    }
+  }
+}
+.title-block {
+  &__command-name {
+    @apply font-bold text-lg text-center pr-2 pl-2 pt-4 pb-2 border-b border-slate-300;
+  }
+  &__command-info {
+    @apply border-gray-50;
+  }
+}
+.info {
+  @apply flex flex-row flex-wrap justify-center justify-items-center;
+  &__address {
+    @apply basis-1/2 text-center text-sm p-1 border-r border-slate-300;
+  }
+  &__fio {
+    @apply basis-1/2 text-center text-sm p-1;
+  }
+  &__phone {
+    @apply relative basis-2/3 text-center text-lg p-1 border-t border-slate-300;
+    &:after {
+      content: "";
+      @apply absolute bottom-1 h-px left-1/4 bg-slate-300 w-1/2;
+    }
+  }
+}

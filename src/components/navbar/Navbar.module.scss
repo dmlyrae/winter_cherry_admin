@@ -1,0 +1,110 @@
+.navbar {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  flex-direction: row;
+  justify-content: space-between;
+  background-image: url("./bg.png");
+  box-shadow: 0 4px 5px 0 rgb(0 0 0 / 24%), 0 2px 2px 0 rgb(0 0 0 / 25%),
+    0 3px 3px 0 rgb(0 0 0 / 22%);
+}
+
+.navbar__links {
+  margin-left: auto;
+  display: none;
+  flex-direction: row;
+  margin-right: 2rem;
+}
+
+.navbar__links a {
+  color: #ff325d;
+  text-decoration: none;
+  text-transform: lowercase;
+  position: relative;
+  transition: 0.2s;
+  z-index: 100;
+}
+.navbar__links a:hover {
+  color: #fff;
+}
+.navbar__links a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 66%;
+  display: none;
+  height: 1px;
+  width: 1px;
+  z-index: 50;
+}
+
+.navbar__links a:hover:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 66%;
+  display: block;
+  background: #fff;
+  border-radius: 50%;
+  height: 7rem;
+  width: 7rem;
+  transform: translate(-2rem, 3.5rem);
+  animation-duration: 0.5s;
+  animation-name: zoom;
+  z-index: 50;
+  opacity: 0.2;
+}
+
+$font: Arial;
+/*Colors*/
+$light: #ffffff;
+$dark: #333333;
+$red: #ce4b30;
+$blue: #2c448b;
+$green: #23954d;
+$yellow: #ce9c30;
+
+$light-gray: #efefef;
+$gray: #666666;
+$white: #ffffff;
+
+$horiz-toolbar-height: 50px;
+
+/* Bootstrap component vars */
+$navbar-min-height: 50px;
+$navbar-inverse-bg: #222;
+
+/* Overrides on Bootstrap */
+.navbar {
+  border-bottom: 1px solid $gray;
+}
+.btn-group {
+  margin-right: 2px;
+}
+.btn-group-vertical {
+  margin-bottom: 6px;
+}
+.glyphicon {
+  margin-top: 4px;
+  margin-bottom: 6px;
+}
+.btn > .caret {
+  margin-left: 4px;
+}
+
+/* Vertical toolbar */
+.toolbar-vertical {
+  position: fixed;
+  top: 50px;
+  width: 60px;
+  right: 0;
+  background-color: $dark;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  border-radius: 0 0 0 6px;
+  z-index: 1;
+}

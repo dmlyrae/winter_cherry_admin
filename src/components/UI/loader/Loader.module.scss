@@ -1,0 +1,61 @@
+$base: #263238;
+$lite: #2c2c2c;
+$brand: teal;
+$size: 48px;
+
+.loader-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mainLoad {
+  width: $size/4;
+  height: $size/4;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  color: $lite;
+  animation: zv 1s linear infinite alternate;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $base;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $brand;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+@keyframes zv {
+  0% {
+    box-shadow: -38px -12px, -14px 0, 14px 0, 38px 0;
+  }
+  33% {
+    box-shadow: -38px 0px, -14px -12px, 14px 0, 38px 0;
+  }
+  66% {
+    box-shadow: -38px 0px, -14px 0, 14px -12px, 38px 0;
+  }
+  100% {
+    box-shadow: -38px 0, -14px 0, 14px 0, 38px -12px;
+  }
+}

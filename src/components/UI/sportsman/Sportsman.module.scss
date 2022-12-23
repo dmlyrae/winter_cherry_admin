@@ -1,0 +1,32 @@
+.card {
+  @apply basis-full sm:basis-1/3 md:basis-1/5 flex flex-col bg-white justify-between 
+    m-2 rounded-md 
+   pt-3 transition-all duration-300
+   overflow-hidden shadow-slate-400 shadow-md relative;
+  &__title-block {
+    @apply font-bold text-base text-center pr-2 pl-2 pt-4;
+  }
+  &__info-block {
+    @apply flex flex-row gap-1 p-2;
+    & * {
+      @apply basis-1/2 text-center;
+    }
+    & *:nth-child(n + 3) {
+      display: none;
+    }
+  }
+  &__button-block {
+    @apply flex flex-row justify-center relative 
+    bottom-0 left-0 right-0
+    border-t border-slate-300;
+    .button {
+      @apply hover:bg-slate-300 text-slate-700 basis-1/2 p-1 transition-colors duration-200;
+      &:first-child {
+        @apply border-slate-300 border-r;
+      }
+      &:last-child {
+        @apply text-red-500;
+      }
+    }
+  }
+}

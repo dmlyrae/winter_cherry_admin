@@ -1,0 +1,34 @@
+.logo {
+}
+.logo-image {
+	height: 70px;
+	margin-top: 5px;
+}
+.logo {
+	height: 60px;
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.logo-text {
+	width: 200px;
+	background-image: url('./l.svg');
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: contain;
+	height: 50px;
+}
+
+.logo-image-inner {
+	height: 75px;
+	transition: 1s;
+	transform-origin: 51px 57px;
+}
+.logo-image-outer {
+	height: 75px;
+}
+.logo:hover .logo-image-inner {
+	transform: rotate(383deg);
+	transition: 1s;
+}

@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bs-body-bg: #fdf5e6 !important;
+  --accent-color: #ff325d;
+  --background-dark: #2c2c2c;
+}
+html,
+body {
+  overflow: auto;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "icons";
+  src: url(./icons.woff2) format("woff2");
+  font-display: block;
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "Roboto", Roboto, sans-serif !important;
+  font-weight: 400;
+  font-size: 16px;
+  min-height: 100vh;
+}
+#root {
+  min-height: 100vh;
+}
+.dark,
+.light {
+  min-height: 100vh;
+}
+
+/* =================== COLORS ===================== */
+/* ================================================ */
+
+body {
+  scrollbar-color: red;
+}
+
+.main {
+  @apply bg-zinc-200 dark:bg-slate-900  text-slate-800 dark:text-slate-100 pb-4;
+  min-height: 100vh;
+}
+
+.page {
+  &__content {
+    @apply m-auto w-full sm:w-5/6 lg:w-4/5;
+  }
+  &__title {
+    @apply p-6 m-auto w-full sm:w-5/6 lg:w-4/5;
+  }
+}
+.title {
+  &__h1 {
+    @apply text-center font-light text-4xl block text-slate-600 uppercase relative;
+  }
+  &__h1:after {
+    @apply absolute content-none -bottom-2 h-px w-1/2 left-1/4 bg-gray-400 mb-2;
+    content: "";
+  }
+  &__description {
+    @apply text-center font-light text-sm text-slate-400 block lowercase;
+  }
+}
+.page__toolbar {
+  @apply w-full mt-3 mb-3;
+}
+
+.toolbar {
+  @apply w-full flex flex-col md:flex-row gap-0 md:gap-2 lg:gap-5 p-2 md:p-0;
+  &__block {
+    @apply basis-full md:basis-1/2 pt-4 pb-4 flex flex-col justify-center align-middle;
+  }
+  &__block:last-child {
+    @apply md:pr-0;
+  }
+  &__block:first-child {
+    @apply md:pl-0;
+  }
+  &__select {
+  }
+}
+/* =================== ICON BUTTONS =============== */
+/* ================================================ */
+
+.icon-button {
+  opacity: 0.9;
+  @apply cursor-pointer box-border 
+  dark:hover:bg-slate-600 dark:hover:text-slate-100 
+  dark:bg-slate-700 dark:text-slate-100 dark:shadow-black focus:dark:bg-slate-700;
+  &.deny {
+    @apply text-red-500;
+  }
+  &.allow:before {
+    @apply text-teal-500;
+  }
+  &.animate:before {
+    @apply animate-pulse;
+  }
+  &_normal:before {
+    @apply text-3xl;
+  }
+  &_large:before {
+    @apply text-5xl;
+  }
+  &_small:before {
+    @apply text-xs;
+  }
+  &:before {
+    content: attr(data-icon);
+    vertical-align: middle;
+    font-family: "icons";
+    font-style: normal;
+    font-weight: normal;
+    text-transform: none;
+    speak: none;
+    content: attr(data-icon);
+    opacity: 0.9;
+    cursor: pointer;
+    white-space: normal;
+  }
+  &:hover {
+    opacity: 1;
+  }
+}
+
+/* =================== TRANSITION ================= */
+/* ================================================ */
+
+.item-enter {
+  opacity: 0;
+}
+.item-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.item-exit {
+  opacity: 1;
+}
+.item-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+}
+
+/* =================== TITLES ===================== */
+/* ================================================ */
+
+.h3__div {
+  @apply pl-3 flex align-text-bottom whitespace-pre-wrap  
+            text-xl leading-8 font-semibold tracking-normal text-sky-600 dark:text-sky-400;
+}
+.under-line {
+  @apply relative before:w-full before:absolute before:-bottom-1 before:h-px before:bg-slate-400;
+  &__110 {
+    @apply relative before:w-[110%] before:absolute before:-bottom-1 before:h-px before:bg-slate-400;
+  }
+}

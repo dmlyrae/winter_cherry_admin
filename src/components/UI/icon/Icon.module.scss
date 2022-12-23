@@ -1,0 +1,44 @@
+.icon {
+  opacity: 0.9;
+  @apply cursor-pointer box-border;
+  &.deny {
+    @apply text-red-500;
+  }
+  &.fire {
+    @apply text-orange-500;
+  }
+  &.allow {
+    @apply text-teal-500;
+  }
+  &.spin {
+    @apply animate-spin;
+  }
+  &.normal {
+    @apply text-xl;
+  }
+  &.large {
+    @apply text-3xl;
+  }
+  &.extralarge {
+    @apply text-5xl;
+  }
+  &.small {
+    @apply text-xs;
+  }
+  &:before {
+    content: attr(data-icon);
+    vertical-align: middle;
+    font-family: "icons";
+    font-style: normal;
+    font-weight: normal;
+    text-transform: none;
+    speak: none;
+    content: attr(data-icon);
+    opacity: 0.9;
+    cursor: pointer;
+    white-space: normal;
+  }
+  &:hover {
+    opacity: 1;
+  }
+}

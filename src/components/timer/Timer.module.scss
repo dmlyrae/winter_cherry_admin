@@ -1,0 +1,72 @@
+.timer {
+  @apply mx-auto flex flex-col align-middle justify-center;
+  touch-action: manipulation;
+  &__title {
+    &_cont {
+    }
+    &_comm {
+      @apply text-slate-600;
+    }
+  }
+  &__back-link {
+    @apply w-full md:w-2/3 px-2 md:px-0 mx-auto text-center md:text-start flex flex-row text-sky-500 hover:text-sky-600 cursor-pointer text-3xl;
+  }
+  &__time {
+    @apply my-10;
+  }
+  &__update-block {
+    @apply text-center;
+    button {
+      @apply hover:text-slate-800 bg-white hover:bg-slate-200 
+    w-2/3
+    shadow-slate-400 shadow-sm text-slate-600 p-2 border-slate-300 border my-6 mx-auto rounded-md;
+    }
+  }
+}
+.time {
+  @apply flex flex-row justify-evenly;
+  &__amount,
+  &__delimeter,
+  &__digits_milliseconds {
+    @apply text-5xl text-center flex flex-col justify-center;
+  }
+  &__amount {
+    @apply my-5 relative;
+    &:before {
+      content: attr(data-descr);
+      position: absolute;
+      bottom: -17%;
+      left: 0;
+      right: 0;
+      text-transform: none;
+      speak: none;
+      white-space: normal;
+      @apply text-sm text-slate-400 opacity-80 hover:opacity-100 text-center;
+    }
+  }
+  &__delimeter {
+    @apply text-slate-400;
+  }
+  &__digits {
+    @apply flex flex-col;
+    &_minutes {
+      @apply text-slate-700;
+    }
+    &_seconds {
+      @apply text-slate-600;
+    }
+    &_milliseconds {
+      @apply text-slate-500;
+    }
+  }
+  &__up-button,
+  &__down-button {
+    @apply basis-full flex flex-row justify-center text-center;
+  }
+  .stop {
+    @apply block;
+  }
+  .work {
+    @apply collapse;
+  }
+}

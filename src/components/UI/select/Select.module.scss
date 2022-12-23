@@ -1,0 +1,94 @@
+.select {
+  @apply w-full flex h-8 relative flex-wrap items-stretch;
+  &__select {
+    display: none;
+    /*
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    position: relative;
+    outline: none;
+    padding: 5px;
+    padding-right: 40px;
+    @apply relative flex-auto min-w-0 block px-3 py-0 
+      text-base font-normal text-gray-700 
+      border border-solid border-gray-300 rounded-l transition ease-in-out 
+      m-0 focus:text-gray-700 
+      focus:bg-white focus:border-teal-600 focus:outline-none 
+      bg-white bg-clip-padding bg-no-repeat;
+      */
+  }
+  &__label {
+    @apply h-8 p-1 cursor-pointer
+      inline-block px-6 py-2.5 bg-teal-600 text-white font-medium text-xs
+      leading-tight uppercase rounded-r shadow-md hover:bg-teal-700 
+      hover:shadow-lg 
+      focus:bg-teal-700 
+      border-r-2 border-teal-600
+      focus:shadow-lg focus:outline-none focus:ring-0 active:bg-teal-800 active:shadow-lg 
+      transition duration-150 ease-in-out flex items-center;
+  }
+  &__open {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 8px 15px;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    position: relative;
+    outline: none;
+    padding: 5px;
+    padding-right: 40px;
+    @apply relative flex-auto min-w-0 block px-3 py-0 
+      text-right font-normal text-gray-400 leading-8 
+      overflow-hidden
+      h-8
+      border border-solid border-gray-300 rounded-l transition ease-in-out 
+      m-0 focus:text-gray-700 
+      bg-clip-padding bg-no-repeat cursor-pointer;
+    &:hover {
+      @apply border-teal-600;
+    }
+  }
+  &__options {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @apply pt-8 text-right border-teal-600 border-2 rounded cursor-pointer;
+    .item {
+      @apply w-full flex justify-end;
+      &__icon {
+        @apply h-8 p-1 cursor-pointer
+            px-6 py-2.5 bg-teal-600 text-white font-medium text-xs
+            leading-tight uppercase shadow-md hover:bg-teal-700 
+            hover:shadow-lg 
+            focus:bg-teal-700 
+            focus:shadow-lg focus:outline-none focus:ring-0 active:bg-teal-800 active:shadow-lg 
+            transition duration-150 ease-in-out flex items-center;
+      }
+
+      &__text {
+        @apply leading-8 pr-6;
+      }
+    }
+    .item:hover {
+      @apply bg-teal-600 cursor-pointer text-white;
+    }
+    &_visible {
+      display: block !important;
+    }
+  }
+}

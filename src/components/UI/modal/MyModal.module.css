@@ -1,0 +1,59 @@
+.modalBlock {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	display: none;
+	background: rgba(0,0,0, 0.4);
+}
+
+.modalBlock.active {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.modalBlockContent {
+	padding: 25px;
+	background: #fff;
+	border-radius: 15px;
+	min-width: 250px;
+}
+
+.modalBlockContent .modalBlock__h1 {
+	font-size: 24px;
+	font-weight: 800;
+	display: flex;
+	justify-content:space-between;
+}
+.modalBlockContent .modalBlock__h1 .h1 {}
+.modalBlockContent .modalBlock__h1 .closeButton {
+	height:24px;
+	width:24px;
+	position: relative;
+}
+.modalBlockContent .modalBlock__h1 .closeButton:before {
+	content: '×';
+	color: #bbb;
+	background-color: #333;
+	height: 24px;
+	width: 24px;
+	font-weight: 800;
+	position: absolute;
+	border-radius: 12px;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: stretch;
+	cursor: pointer;
+}
+
+.modalBlockContent .modalBlock__body {
+
+}
+.modalBlockContent .modalBlock__footer {
+
+}
